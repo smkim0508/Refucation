@@ -8,6 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
    $fullname = trim($_POST['name']);
    $email = trim($_POST['email']);
    $password = trim($_POST['password']);
+   $country = trim($_POST['country']); 
+   $address = trim($_POST['address']); 
+   $school = trim($_POST['school']); 
    $confirm_password = trim($_POST['confirm_password']);
    $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
@@ -32,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
          }
 
          if (empty($error)) {
-            $insertQuery = $db->prepare("INSERT INTO users (name, email, password)
-            VALUES (?, ?, ?);");
+            $insertQuery = $db->prepare("INSERT INTO users (name, email, password, country, address, school)
+            VALUES (?, ?, ?, ?, ?, ?);");
             $insertQuery->bind_param("sss", $fullname, $email, $password_hash);
             $result = $insertQuery->execute();
             if ($result) {
