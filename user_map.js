@@ -59,6 +59,13 @@ function initMap() {
   clear();
 }
 
+let realName = req.body.realName;
+let email = req.body.email;
+let password = req.body.password;
+
+let insertMessageQ = "INSERT INTO users (realname, email, password) VALUES (?, ?, ?)";
+let insertMessageResult = await p.query(insertMessageQ, [realName, email, password]);
+
 function clear() {
   marker.setMap(null);
   responseDiv.style.display = "none";
