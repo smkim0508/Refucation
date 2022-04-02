@@ -1,4 +1,3 @@
-
 let map;
 let marker;
 let geocoder;
@@ -77,7 +76,7 @@ function geocode(request) {
       marker.setMap(map);
       responseDiv.style.display = "block";
       response.innerText = JSON.stringify(result, null, 2);
-      console.log(results[0].geometry.location.lat());
+      // console.log(results[0].geometry.location.lat());
       return results;
     })
     .catch((e) => {

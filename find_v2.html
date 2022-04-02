@@ -78,7 +78,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["userid"] !== true) {
                                  <a class="nav-link" href="about.html">About Us</a>
                               </li>
                                <li class="nav-item">
-                                 <a class="nav-link" href="logout.php">Log Out</a>
+                                 <a class="btn btn-secondary btn-lg active" href="logout.php" role="button" aria-pressed="true">Log Out</a>
                               </li>
                               <li class=" d_none get_btn">
                                  <a  href="#bottom">Connect with a teacher today</a>
@@ -104,105 +104,107 @@ if (!isset($_SESSION["userid"]) || $_SESSION["userid"] !== true) {
          <div class="container"></div>
       </div>
       <!--The div element for the map -->
-    <div id="map"></div>
+    <div id="map">
+    </div>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIBPyIdQYviNFNFpFOp2q3PfQTXhZYQSg&callback=initMap&v=weekly" async>
-   </script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIBPyIdQYviNFNFpFOp2q3PfQTXhZYQSg&callback=initMap&v=weekly"
+      async
+    ></script>
     <div class="space">
       <div class="container">
-         <div class="mapheader">
-            <h2>Find Students</h2>
-         </div>
-         <div class="row">
-<div class="column">
-<div class="card">
+               <div class="mapheader">
+                  <h2>Find Students</h2>
+               </div>
+               <div class="row">
+  <div class="column">
+    <div class="card">
 
-<div class="container">
-  <h2>Jane Doe</h2>
-  <p class="title">4th Grade</p>
-  <p>Student who is currently in Poland looking for classes in English and Mathematics</p>
-  <p>jd@poland.org</p>
-  <p><button class="button">Connnect</button></p>
-</div>
-</div>
-</div>
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">4th Grade</p>
+        <p>Student who is currently in Poland looking for classes in English and Mathematics</p>
+        <p>jd@poland.org</p>
+        <p><button class="button">Connnect</button></p>
+      </div>
+    </div>
+  </div>
 
-<div class="column">
-<div class="card">
+  <div class="column">
+    <div class="card">
+     
+      <div class="container">
+        <h2>Devon Lai</h2>
+        <p class="title">8th Grade</p>
+        <p>Student displaced from original home in SouthEast looking to resume classes in Science and Math</p>
+        <p>dl@pure.com</p>
+        <p><button class="button">Connect</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Shyan Morre</h2>
+        <p class="title">2nd grade</p>
+        <p>Student looking for help resuming English classes and Math Classes</p>
+        <p>shmor@student.ocm</p>
+        <p><button class="button">Connect</button></p>
+      </div>
+    </div>
+  </div>
+  <!--- Bottom is for TEACHERS-->
 
-<div class="container">
-  <h2>Devon Lai</h2>
-  <p class="title">8th Grade</p>
-  <p>Student displaced from original home in SouthEast looking to resume classes in Science and Math</p>
-  <p>dl@pure.com</p>
-  <p><button class="button">Connect</button></p>
-</div>
-</div>
-</div>
-<div class="column">
-<div class="card">
+               <div class="mapheader">
+                  <h2>Find Teachers</h2>
+               </div>
 
-<div class="container">
-  <h2>Shyan Morre</h2>
-  <p class="title">2nd grade</p>
-  <p>Student looking for help resuming English classes and Math Classes</p>
-  <p>shmor@student.ocm</p>
-  <p><button class="button">Connect</button></p>
-</div>
-</div>
-</div>
-<!--- Bottom is for TEACHERS-->
+    <div class="row">
+  <div class="column">
+    <div class="card">
 
-         <div class="mapheader">
-            <h2>Find Teachers</h2>
-         </div>
+      <div class="container">
+        <h2>DS</h2>
+        <p class="title">Middle School Teacher from United States</p>
+        <p>Expertise in Mathematics</p>
+        <p>divsha23@bergen.org</p>
+        <p><button class="button">Work with in Lessons</button></p>
+      </div>
+    </div>
+  </div>
 
-<div class="row">
-<div class="column">
-<div class="card">
-
-<div class="container">
-  <h2>DS</h2>
-  <p class="title">Middle School Teacher from United States</p>
-  <p>Expertise in Mathematics</p>
-  <p>divsha23@bergen.org</p>
-  <p><button class="button">Work with in Lessons</button></p>
+  <div class="column">
+    <div class="card">
+     
+      <div class="container">
+        <h2>DL</h2>
+        <p class="title">High School Science Teacher</p>
+        <p>Expertise in Chemistry and Computer Science</p>
+        <p>dl@tranquility.org</p>
+        <p><button class="button">Work with in Lessons</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+    
+      <div class="container">
+       <h2>SK</h2>
+        <p class="title">Elementary School Teacher working in the Humanities</p>
+        <p>Resume lessons in Grammer, Cursive, or History</p>
+        <p>sk@php.com</p>
+        <p><button class="button">Work with in Lessonss</button></p>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
-
-<div class="column">
-<div class="card">
-
-<div class="container">
-  <h2>DL</h2>
-  <p class="title">High School Science Teacher</p>
-  <p>Expertise in Chemistry and Computer Science</p>
-  <p>dl@tranquility.org</p>
-  <p><button class="button">Work with in Lessons</button></p>
-</div>
-</div>
-</div>
-
-<div class="column">
-<div class="card">
-
-<div class="container">
- <h2>SK</h2>
-  <p class="title">Elementary School Teacher working in the Humanities</p>
-  <p>Resume lessons in Grammer, Cursive, or History</p>
-  <p>sk@php.com</p>
-  <p><button class="button">Work with in Lessonss</button></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="container"></div>
-</div>
-
+      </div>
+      <div class="container"></div>
+   </div>
+      
 </body>
 </html>
