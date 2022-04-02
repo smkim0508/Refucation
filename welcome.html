@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["userid"]) || $_SESSION["userid"] !== true) {
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +40,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="find.css">
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       
@@ -66,7 +77,7 @@
                                  <a class="nav-link" href="about.html">About Us</a>
                               </li>
                                <li class="nav-item">
-                                 <a class="nav-link" href="join.html">Sign Up today</a>
+                                 <a class="btn btn-secondary btn-lg active" href="logout.php" role="button" aria-pressed="true">Log Out</a>
                               </li>
                               <li class=" d_none get_btn">
                                  <a  href="#bottom">Connect with a teacher today</a>
@@ -105,9 +116,84 @@
                <div class="mapheader">
                   <h2>Find Students</h2>
                </div>
+               <div class="row">
+  <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">4th Grade</p>
+        <p>Student who is currently in Poland looking for classes in English and Mathematics</p>
+        <p>jd@poland.org</p>
+        <p><button class="button">Connnect</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+     
+      <div class="container">
+        <h2>Devon Lai</h2>
+        <p class="title">8th Grade</p>
+        <p>Student displaced from original home in SouthEast looking to resume classes in Science and Math</p>
+        <p>dl@pure.com</p>
+        <p><button class="button">Connect</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Shyan Morre</h2>
+        <p class="title">2nd grade</p>
+        <p>Student looking for help resuming English classes and Math Classes</p>
+        <p>shmor@student.ocm</p>
+        <p><button class="button">Connect</button></p>
+      </div>
+    </div>
+  </div>
+  <!--- Bottom is for TEACHERS-->
+
                <div class="mapheader">
                   <h2>Find Teachers</h2>
                </div>
+               <div class = "hottest"></div>
+               <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>DS</h2>
+        <p class="title">Middle School Teacher from United States</p>
+        <p>Expertise in Mathematics</p>
+        <p>divsha23@bergen.org</p>
+        <p><button class="button">Work with in Lessons</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>DL</h2>
+        <p class="title">High School Science Teacher</p>
+        <p>Expertise in Chemistry and Computer Science</p>
+        <p>dl@tranquility.org</p>
+        <p><button class="button">Work with in Lessons</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>SK</h2>
+        <p class="title">Elementary School Teacher working in the Humanities</p>
+        <p>Resume lessons in Grammer, Cursive, or History</p>
+        <p>sk@php.com</p>
+        <p><button class="button">Work with in Lessonss</button></p>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
       <div class="container"></div>
    </div>

@@ -38,8 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $query->close();
     }
     //Close connection
-    mysqli_close($db)
+    mysqli_close($db);
 }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
