@@ -76,7 +76,7 @@ function geocode(request) {
       marker.setMap(map);
       responseDiv.style.display = "block";
       response.innerText = JSON.stringify(result, null, 2);
-      console.log(results[0].geometry.location.lat());
+      console.log(results[0].geometry.location.lng());
       return results;
     })
     .catch((e) => {
