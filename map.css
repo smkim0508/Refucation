@@ -85,4 +85,15 @@
         padding: 1rem;
         font-size: medium;
       }
-      
+
+.mapheader {
+  
+  text-align: center;
+  font-size: 40px;
+}
+
+.space {
+  
+  background: #fff;
+  padding: 40px 0 40px 0;
+}
